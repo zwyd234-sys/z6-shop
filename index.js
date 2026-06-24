@@ -29,4 +29,4 @@ client.on('messageCreate', async (message) => {
 });
 
 // ضع التوكين الخاص ببوتك هنا
-client.login('MTUxODc2NDg4MDg4NTE5MDc5MA.GhOa14.nTWiniB60NxiQOm98bxZrn9OTLOYhcDvlPO_cI');
+client.login('');
