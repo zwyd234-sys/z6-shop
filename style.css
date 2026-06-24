@@ -1,0 +1,22 @@
+body {
+    background-color: #f4f4f9; /* هذا هو لون الخلفية */
+    font-family: Arial, sans-serif;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
