@@ -1,22 +1,71 @@
+/* تنسيق الخلفية الجلدية */
 body {
-    background-color: #f4f4f9; /* هذا هو لون الخلفية */
-    font-family: Arial, sans-serif;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: white;
 }
 
+/* تنسيق حاوية المنتجات */
 .products-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 25px;
     padding: 20px;
 }
 
+/* تنسيق كرت المنتج الاحترافي */
 .product-card {
-    background: white;
-    border: 1px solid #ccc;
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #d4af37;
+    padding: 20px;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+/* تنسيق زر الشراء */
+.buy-btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.15);
+    background-color: #f1c40f;
+}
+
+h1 { color: #d4af37; text-shadow: 2px 2px 4px black; }
+
+/* تنسيق قسم الحقوق والفوتر (الجديد) */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 2px solid #d4af37;
+    color: white;
+}
+
+.discord-link {
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.discord-link:hover {
+    transform: scale(1.2); /* تكبير الأيقونة عند الماوس */
 }
