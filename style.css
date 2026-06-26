@@ -1,13 +1,21 @@
-/* تنسيق الخلفية الجلدية */
+/* تنسيق الخلفية (الصورة الجديدة) */
 body {
-    background-image: url('bg.png');
+    background-image: url('logop.png') !important;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
     color: white;
+    min-height: 100vh;
+}
+
+/* تنسيق العنوان والوصف في المنتصف */
+.main-title, .subtitle {
+    text-align: center;
+    width: 100%;
 }
 
 /* تنسيق حاوية المنتجات */
@@ -17,9 +25,11 @@ body {
     justify-content: center;
     gap: 25px;
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-/* تنسيق كرت المنتج الاحترافي */
+/* تنسيق كرت المنتج */
 .product-card {
     background: rgba(0, 0, 0, 0.7);
     border: 2px solid #d4af37;
@@ -50,7 +60,7 @@ body {
 
 h1 { color: #d4af37; text-shadow: 2px 2px 4px black; }
 
-/* تنسيق قسم الحقوق والفوتر (الجديد) */
+/* تنسيق الفوتر */
 .footer {
     text-align: center;
     margin-top: 50px;
@@ -60,46 +70,19 @@ h1 { color: #d4af37; text-shadow: 2px 2px 4px black; }
     color: white;
 }
 
-.discord-link {
-    display: inline-block;
-    margin-top: 10px;
-    transition: transform 0.3s ease;
-}
-
-.discord-link:hover {
-    transform: scale(1.2); /* تكبير الأيقونة عند الماوس */
-}/* هذا الكود يخلي العنوان والوصف في منتصف الصفحة */
-.main-title, .subtitle {
-    text-align: center;
-    width: 100%;
-/* 1. إصلاح الخلفية لتكون خلف كل شيء */
-body {
-    background-image: url('logop.png') !important;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
-
-/* 2. النافذة المنبثقة (القصة) تكون في أعلى طبقة ممكنة */
+/* تنسيق النافذة المنبثقة للقصة */
 #about-modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95) !important;
-    z-index: 99999 !important; /* هذا الرقم العالي يضمن أنها فوق كل شيء */
-    display: flex;
-    flex-direction: column;
+    z-index: 99999 !important;
     justify-content: center;
     align-items: center;
-}
-
-/* 3. ضمان أن المنتجات لا تتداخل مع القصة */
-.products-grid {
-    position: relative;
-    z-index: 1;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
